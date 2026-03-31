@@ -20,8 +20,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 sh '''
-                source venv/bin/activate
-                python3 manage.py test helloworld.tests
+                ./venv/bin/python3 manage.py test helloworld.tests
                 '''
             }
         }
